@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/d69d486a2e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section>
+      <main class="w-3/4 pb-3 mx-auto mt-10 bg-sky-300 text-center shadow-lg">
+        <h1 class="text-3xl font-semibold text-center py-4">My Text Editor</h1>
+        <div class="text-editor p-4 w-3/4 bg-sky-100 border-2 border-black border-dotted mx-auto">
+          <div class="grid grid-cols-3 my-3 justify-items-center items-center border-b border-black border-dashed pb-2">
+            <div class="tools grid grid-cols-3 gap-6">
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="bold" type="submit"><i class="fa-solid fa-b"></i></button>
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="italic" type="submit"><i class="fa-solid fa-i"></i></button>
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="underline" type="submit"><i class="fa-solid fa-u"></i></button>
+            </div>
+            <div class="tools grid grid-cols-4 gap-6">
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="leftAlign" type="submit">
+                <i class="fa-solid fa-align-left"></i>
+              </button>
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="centerAlign" type="submit">
+                <i class="fa-solid fa-align-center"></i>
+              </button>
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="rightAlign" type="submit">
+                <i class="fa-solid fa-align-right"></i>
+              </button>
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="justifyAlign" type="submit">
+                <i class="fa-solid fa-align-justify"></i>
+              </button>
+            </div>
+            <div class="tools grid grid-cols-3 gap-3 text-center">
+              <input class="bg-none outline-none w-9" value="16" type="number" min="16" name="" id="number" />
+              <span class="font-medium">aA</span>
+              <input class="border-white" type="color" name="" id="color">
+            </div>
+          </div>
+          <div class="textAria">
+            <textarea style="width: 700px; height: 300px;" class="outline-none mx-auto my-3 resize-none p-2" name="" id="textAria"></textarea>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
