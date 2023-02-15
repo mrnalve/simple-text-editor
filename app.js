@@ -60,7 +60,20 @@ number.addEventListener('input', () => {
     textAria.style.fontSize = num + 'px';
 })
 
-// step 9 - text color
+// step 9 - upper and lower case
+let upperLower = document.getElementById('upperLower');
+upperLower.addEventListener('click', ()=>{
+    let currentState = textAria.style.textTransform;
+    if (currentState === "uppercase") {
+        textAria.style.textTransform = 'lowercase'
+    }else{
+        textAria.style.textTransform = 'uppercase'
+    }
+})
+
+
+
+// step 10 - text color
 let color = document.getElementById('color');
 color.addEventListener('input', ()=>{
     let getColor = color.value;
@@ -68,3 +81,24 @@ color.addEventListener('input', ()=>{
     textAria.style.color = getColor + "";
 })
 
+let btns = document.getElementsByTagName('button')
+for (const btn of btns) {
+    btn.addEventListener('click', (e)=>{
+        currentState =  e.target.parentNode.classList.contains('active');
+        if (currentState) {
+            e.target.parentNode.classList.remove('active')
+        }else{
+            e.target.parentNode.classList.add('active')
+        }
+    })
+}
+const buttons = document.querySelectorAll('.alignment');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    buttons.forEach((btn) => {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+  });
+});

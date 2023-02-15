@@ -10,6 +10,11 @@
       src="https://kit.fontawesome.com/d69d486a2e.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      button.active{
+        background-color: rgb(125 211 252) !important;
+      }
+    </style>
   </head>
 
   <body>
@@ -24,22 +29,22 @@
               <button class="hover:bg-sky-300 hover:rounded p-0.5" id="underline" type="submit"><i class="fa-solid fa-u"></i></button>
             </div>
             <div class="tools grid grid-cols-4 gap-6">
-              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="leftAlign" type="submit">
+              <button class="alignment hover:bg-sky-300 hover:rounded p-0.5" id="leftAlign" type="submit">
                 <i class="fa-solid fa-align-left"></i>
               </button>
-              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="centerAlign" type="submit">
+              <button class="alignment hover:bg-sky-300 hover:rounded p-0.5" id="centerAlign" type="submit">
                 <i class="fa-solid fa-align-center"></i>
               </button>
-              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="rightAlign" type="submit">
+              <button class="alignment hover:bg-sky-300 hover:rounded p-0.5" id="rightAlign" type="submit">
                 <i class="fa-solid fa-align-right"></i>
               </button>
-              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="justifyAlign" type="submit">
+              <button class="alignment hover:bg-sky-300 hover:rounded p-0.5" id="justifyAlign" type="submit">
                 <i class="fa-solid fa-align-justify"></i>
               </button>
             </div>
             <div class="tools grid grid-cols-3 gap-3 text-center">
               <input class="bg-none outline-none w-9" value="16" type="number" min="16" name="" id="number" />
-              <span class="font-medium">aA</span>
+              <button class="hover:bg-sky-300 hover:rounded p-0.5" id="upperLower" type="submit"><span class="font-medium">aA</span></button>
               <input class="border-white" type="color" name="" id="color">
             </div>
           </div>
